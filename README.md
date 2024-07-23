@@ -1,6 +1,6 @@
 # AngularRecipeAuth
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.1.1.
+Project to login and registration form on Angular 18
 
 ## Development server
 

@@ -1,0 +1,32 @@
+<header>
+    <div class="header-container">
+        <div class="logo">
+            <img src="img/cook-icon.png" alt="Logo">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#about">Services</a></li>
+                @if (!isLogin() ) {
+                <li><a routerLink="/recipes">Recipes</a></li>
+                }
+                <!-- Add more navigation links as needed -->
+            </ul>
+        </nav>
+        <div class="login-register">
+            <nav>
+                <ul>
+                    @if (isLogin() ) {
+                        <li><a routerLink="/login">Login</a></li>
+                        <li><a routerLink="/signup">Register</a></li>
+                    }
+                    @else if (!isLogin() ) {
+                        <li><a routerLink="" (click)="loginService.logout()">Sign out</a></li>
+                    }
+                </ul>
+
+            </nav>
+        </div>
+    </div>
+</header>
